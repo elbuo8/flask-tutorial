@@ -1,14 +1,12 @@
 <!doctype html>
 <title>Tweetbot</title>
-{% if tweets %}
   {% for tweet in tweets %}
     <div id='{{tweet._id}}' class='tweet'>
       <p>{{tweet.text}}</p>
     </div>
-  {% endfor %}
 {% else %}
   <p> No tweets brah</p>
-{% endif %}
+{% endfor %}
 
 Tweet: <input id='tweet-text' type='text' name='tweet'>
 <button id='add-tweet'>Add!</button>
